@@ -1,7 +1,7 @@
-player_name = []
+player_name = {}
 
 num = 1
-num_of_players = int(input("Hello DM! How many players will you be having today?"))
+num_of_players = int(input("Hello DM! How many players will you be having today? "))
 
 while num_of_players >= num:
     if num_of_players >= 7:
@@ -9,6 +9,8 @@ while num_of_players >= num:
         break
     else:   
         names = input("what is player" + str(num) + " name: ")
-        player_name.append(names)
-    num += 1
-    print(player_name[:4])
+        turn =  int(input("What was " + names + " initiative "))
+        player_name[names]=turn 
+    num += 1   
+
+print(player_name)
